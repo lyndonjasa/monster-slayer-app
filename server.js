@@ -3,9 +3,10 @@ var express = require('express');
 
 const app = express();
 const pathName = __dirname + "/site";
+
 app.use(express.static(pathName));
 app.get("/*", (req, res) => {
-    res.sendFile(__dirname + "/site/index.html");
+    res.sendFile(pathName + "/index.html");
 });
 
 var port = process.env.PORT || 5000;
