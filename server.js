@@ -5,7 +5,7 @@ const app = express();
 const pathName = __dirname + "/site";
 
 app.use(express.static(pathName));
-app.get("/*", (req, res) => {
+app.get("/*", (_, res) => {
     res.sendFile(pathName + "/index.html");
 });
 
